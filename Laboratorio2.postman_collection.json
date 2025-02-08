@@ -1,0 +1,436 @@
+{
+	"info": {
+		"_postman_id": "73c98c1d-317d-47f3-b19f-092ff8abd610",
+		"name": "Laboratorio2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956970"
+	},
+	"item": [
+		{
+			"name": "CRUDUser",
+			"item": [
+				{
+					"name": "GetUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/api/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:2636/api/users/67a6e1504afaaaa4c7e280bd",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"users",
+								"67a6e1504afaaaa4c7e280bd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:2636/api/users/67a6dcea4afaaaa4c7e28095",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"users",
+								"67a6dcea4afaaaa4c7e28095"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutUsers",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2ZTgzNTQxMDI5MjlkMGQxMGVlODIiLCJ1c2VybmFtZSI6InBhcm1hc3MiLCJuYW1lIjoiQW5kcmUiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNzM4OTkxNjgxLCJleHAiOjE3MzkwMDI0ODF9.uerKu2qtkYAR-bkgUT6zOWBgkOeP7-yHLlPiFmF7LDE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "pepe",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "pepeeee@kinal.edu.gt",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/api/users/67a6e1504afaaaa4c7e280bd",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"users",
+								"67a6e1504afaaaa4c7e280bd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostRegisterImage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Andre",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Figueroa",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "parmass",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "afigueroa-2023d106@kinal.edu.gt",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Andre2023-106",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1efe4cb6-e15a-4120-a887-797771df87cb"
+								},
+								{
+									"key": "phone",
+									"value": "36947503",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostLogin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "parmass",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Andre2023-106",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2ZTgzNTQxMDI5MjlkMGQxMGVlODIiLCJ1c2VybmFtZSI6InBhcm1hc3MiLCJuYW1lIjoiQW5kcmUiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNzM4OTkxNjgxLCJleHAiOjE3MzkwMDI0ODF9.uerKu2qtkYAR-bkgUT6zOWBgkOeP7-yHLlPiFmF7LDE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"currentPassword\": \"Andre2023-106\",\r\n  \"newPassword\": \"13231412421321DSSFa\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2636/api/auth/update-password",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"auth",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUDAnimal",
+			"item": [
+				{
+					"name": "GetAnimal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/api/animals/",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"animals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAnimalById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/api/animals/67a6df1d4afaaaa4c7e280a9",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"animals",
+								"67a6df1d4afaaaa4c7e280a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAnimal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/api/animals/67a6de3d4afaaaa4c7e280a1",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"animals",
+								"67a6de3d4afaaaa4c7e280a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutAnimal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Hector",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/api/animals/67a6df1d4afaaaa4c7e280a9",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"animals",
+								"67a6df1d4afaaaa4c7e280a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostAnimal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Max",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Un perro pequeño",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Mamifero",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "67a6cf93905cc007362ed2f0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/api/animals",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"animals"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUDAppointment",
+			"item": [
+				{
+					"name": "PostAppointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/api/appointments",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
